@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="235" id="com.konecty.rocket.chat" ios-CFBundleVersion="3" version="2.3.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Rocket.Chat</name>
+<widget android-versionCode="235" id="com.wathmal.rocket.chat" ios-CFBundleVersion="3" version="2.3.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>our chat</name>
     <description>
-        Rocket.Chat mobile application
+        our chat client powered with rocket chat
     </description>
-    <author email="support@rocket.chat" href="http://rocket.chat">
-        Rocket.Chat
+    <author email="wathmal@hotmail.com" href="http://wathmal.me">
+        wathmal
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
