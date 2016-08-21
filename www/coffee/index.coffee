@@ -27,7 +27,7 @@ window.registerServer = (serverAddress) ->
 	serverAddress ?= $('#serverAddress').val().trim().toLowerCase()
 
 	if serverAddress.length is 0
-		serverAddress = 'https://demo.rocket.chat'
+		serverAddress = 'http://wathmal.me:5555'
 
 	if not /(^https?:\/\/)|(\.)|(^localhost(:\d+)?$)/.test serverAddress
 		serverAddress = 'https://' + serverAddress + '.rocket.chat'

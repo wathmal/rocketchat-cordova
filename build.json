@@ -1,7 +1,7 @@
 {
     "ios": {
         "debug": {
-            "codeSignIdentitiy": "iPhone Development",
+            "codeSignIdentitiy": "iPcordhone Development",
             "provisioningProfile": "379b5cc0-90b0-4593-a7f0-2eb4b9d150d7"
         },
         "release": {
@@ -12,9 +12,9 @@
 
     "android": {
         "release": {
-            "keystore": "RocketChat.keystore",
-            "storePassword": "",
-            "alias": "RocketChat",
+            "keystore": "our-chat.keystore",
+            "storePassword": "wadamala",
+            "alias": "ourchat",
             "password" : "",
             "keystoreType": ""
         }
