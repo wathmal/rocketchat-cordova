@@ -34,7 +34,7 @@ window.registerServer = (serverAddress) ->
 		serverAddress = baseUrl.replace("http://", "http://sandstorm:#{auth}@").replace("https://", "https://sandstorm:#{auth}@")
 
 	if serverAddress.length is 0
-		serverAddress = 'http://wathmal.me:5555'
+		serverAddress = 'http://188.166.248.79:5555'
 
 	if not /(^https?:\/\/)|(\.)|(^localhost(:\d+)?$)/.test serverAddress
 		serverAddress = 'https://' + serverAddress + '.rocket.chat'
