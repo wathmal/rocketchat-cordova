@@ -33,6 +33,9 @@ window.registerServer = (serverAddress) ->
 		auth = serverAddress.slice hashIndex + 1
 		serverAddress = baseUrl.replace("http://", "http://sandstorm:#{auth}@").replace("https://", "https://sandstorm:#{auth}@")
 
+	# Remove trailing slash, if present.
+	serverAddress = serverAddress.replace(/\/$/, '')
+
 	if serverAddress.length is 0
 		serverAddress = 'http://188.166.248.79:5555'
 

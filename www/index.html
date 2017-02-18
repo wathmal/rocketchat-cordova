@@ -20,7 +20,7 @@
             </div>
             <div class="server-enter">
                 <form novalidate="novalidate">
-                    <input type="url" id="serverAddress" placeholder="http://188.166.248.79:5555/"/>
+                    <input type="url" id="serverAddress" placeholder="http://ec2.wathmal.me:3000" />
 
                     <div class="connect-button">
                         <button type="submit" id="serverAddressButton"><span data-i18n="Connect"></span></button>
@@ -30,26 +30,23 @@
                 <div id="alert-messages"></div>
             </div>
 
-            <!--<div class="server-list-info">
+            <div class="server-list-info">
                 <span data-i18n="Swipe_2_fingers_up_to_open_the_server_list_or_click_here"></span>
-            </div>-->
-
-            <!-- <div class="server-info">
-                Beta 8<br/>2015-11-28
-            </div> -->
+            </div>
         </section>
 
         <section class="overlay keyboard">
             <div class="loading-box">
-                <div class="spinner">
-                    <div class="rect1"></div>
-                    <div class="rect2"></div>
-                    <div class="rect3"></div>
-                    <div class="rect4"></div>
-                    <div class="rect5"></div>
+                <div class="loading-animation">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
                 </div>
                 <div class="loading-text">
                     ...
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill"></div>
                 </div>
             </div>
         </section>
@@ -68,6 +65,17 @@
 
         <script type="text/javascript">
             FastClick.attach(document.body);
+            function handleOpenURL(url) {
+              if (url.indexOf('clientapp-rocketchat:') !== 0) {
+                return;
+              }
+              window.AUTOLOAD = false;
+              url = url.replace("%23", "#"); // iOS escapes the # character. Unescape it.
+              url = url.slice('clientapp-rocketchat:'.length);
+              Servers.onLoad(function () {
+                registerServer(url);
+              });
+            }
         </script>
     </body>
 </html>
